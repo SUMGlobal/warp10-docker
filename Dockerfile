@@ -1,5 +1,7 @@
-FROM lwieske/java-8:jdk-8u66-slim
-MAINTAINER Horacio Gonzalez <horacio.gonzalez@gmail.com>
+FROM sumglobal/rpi-openjdk:8-jre-alpine
+MAINTAINER Charles Walker <cwalker@sumglobal.com>
+
+RUN [ "cross-build-start" ]
 
 # Updating apk index
 RUN apk update && apk add bash curl python
@@ -65,3 +67,5 @@ VOLUME ${WARP10_VOLUME}
 EXPOSE 8080 8081
 
 CMD ${WARP10_HOME}/bin/warp10.start.sh
+
+RUN [ "cross-build-end" ]  
