@@ -1,4 +1,4 @@
-FROM sumglobal/rpi-openjdk:8-jre-alpine
+FROM sumglobal/rpi-openjdk:8-jdk-alpine
 MAINTAINER Charles Walker <cwalker@sumglobal.com>
 
 RUN [ "cross-build-start" ]
