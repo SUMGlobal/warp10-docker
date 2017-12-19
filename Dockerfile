@@ -38,7 +38,7 @@ RUN cd /opt \
 # Deleting build-dependencies
 RUN apk del build-dependencies
 
-ENV JAVA_HOME=/usr \
+ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk \
   WARP10_HOME=/opt/warp10-${WARP10_VERSION} SENSISION_HOME=/opt/sensision-${SENSISION_VERSION} \
   WARP10_VOLUME=/data MAX_LONG=3153600000000 \
   WARP10_DATA_DIR=/data/warp10 \
